@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import tkinter as tk
 from tkinter import messagebox
 from addcriminal import AddCriminal

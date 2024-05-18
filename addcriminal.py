@@ -1,5 +1,3 @@
-import streamlit as st
-import pandas as pd
 import tkinter as tk
 from tkinter import messagebox
 import mysql.connector
@@ -29,6 +27,7 @@ class AddCriminal:
 
         self.criminal_type_label = tk.Label(self.root, text="TYPE:", font=("Helvetica", 15))
         self.criminal_type_label.pack(anchor="center", padx=5, pady=10)
+
         self.criminal_type_var = tk.StringVar(self.root)
         self.criminal_type_var.set("")  # Initial value
         self.criminal_type_option_menu = tk.OptionMenu(self.root, self.criminal_type_var, "Criminal", "Non-criminal")
@@ -55,7 +54,8 @@ class AddCriminal:
         except Error as e:
             print("Error connecting to database:", e)
             return None
- def submit_details(self):
+
+    def submit_details(self):
         con = self.dbconnection()
         if con:
             name = self.name_entry.get("1.0", tk.END).strip()
@@ -86,7 +86,9 @@ class AddCriminal:
                 except Error as e:
                     messagebox.showerror("Error", f"Error: {e}")
                 finally:
- cursor.close()
+                    cursor.close()
                     con.close()
-if _name_ == "_main_":
-    AddCriminal()
+if __name__ == "__main__":
+    AddCriminal()
+
+

@@ -59,7 +59,7 @@ for i in range(5):
                                         # img_new = cv2.imread('saved_img.jpg', cv2.IMREAD_GRAYSCALE)
                                         # img_new = cv2.imshow("Captured Image", img_new)
                                         cv2.waitKey(1)
-cv2.destroyAllWindows()     
+                                        cv2.destroyAllWindows()     
                                         break
                         elif key == ord('q'):
                                 print("Turning off camera.")
@@ -68,6 +68,6 @@ cv2.destroyAllWindows()
                                 print("Program ended.")
                                 cv2.destroyAllWindows()
                                 break
-        f=open("ref_embed.pkl","wb")
-        pickle.dump(embed_dictt,f)
-        f.close()
+                                f=open("ref_embed.pkl","wb")
+                                pickle.dump(embed_dictt,f)
+                                f.close()

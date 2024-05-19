@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import sys
-import cv2 
+import opencv-python 
 import face_recognition
 import pickle
 

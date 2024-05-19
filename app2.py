@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 st.title('Twitter Scraper using snscraper')
 query = st.text_input('Enter a keyword or hashtag')
 start_date = st.date_input('Start date', value=pd.Timestamp('2021-01-01'))
